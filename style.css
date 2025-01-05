@@ -1,0 +1,921 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: sticky;
+  top: 0;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*navbar*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  margin: 0 15px;
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+}
+
+.toggle-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .toggle-button {
+    display: block;
+  }
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('assets/hero-car.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.cta-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cta-primary {
+  background-color: #00aaff;
+  color: white;
+  border-radius: 5px;
+}
+
+.cta-primary:hover {
+  background-color: white;
+  color: #00aaff;
+}
+
+.cta-secondary {
+  background-color: transpat;
+  border: 5px solid white;
+  color: #00aaff;
+  border-radius: 5px;
+}
+
+.cta-secondary:hover {
+  background-color: #00aaff;
+  color: white;
+}
+
+/* Key Features Section */
+.key-features {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #181818;
+}
+
+.key-features h2 {
+  margin-bottom: 30px;
+}
+
+.features-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-card {
+  background: #242424;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+.feature-card i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Showcase Video */
+.showcase-video {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #121212;
+}
+
+.showcase-video h2 {
+  margin-bottom: 20px;
+}
+
+.showcase-video video {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+/* Models Section */
+.models-section {
+  padding: 50px 20px;
+  background-color: #121212;
+  color: white;
+}
+
+.models-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.models-header h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background-color: #242424;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-btn:hover {
+  background-color: #00aaff;
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.model-card {
+  position: relative;
+  background-color: #181818;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.model-card:hover {
+  transform: scale(1.05);
+}
+
+.model-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.model-info {
+  padding: 2px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.3s;
+}
+
+/* Product Detail Section */
+.product-detail {
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #121212;
+  padding: 20px;
+}
+
+/* Tabs */
+.tabs-container {
+  margin-top: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.tab {
+  padding: 20px 20px;
+  background: #181818;
+  border: 1px solid #9d9d9d;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #00aaff;
+}
+
+.tab-content {
+  background: #181818;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Specifications Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #242424;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background: #242424;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Configurator */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 14px;
+}
+
+select, button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* CTA Section */
+.cta-section {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  background: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cta-btn:hover {
+  background: #0088cc;
+}
+
+/* Technology Section */
+.technology-section {
+  padding: 50px 20px;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+}
+
+.technology-section h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.technology-section p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #cccccc;
+}
+
+/* Tech Cards */
+.tech-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tech-card {
+  background: #181818;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 170, 255, 0.5);
+}
+
+.tech-card .icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+  color: #00aaff;
+}
+
+.tech-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.tech-card p {
+  font-size: 16px;
+  color: #cccccc;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tech-card.show {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Dealership Locator Section */
+.dealership-locator {
+  padding: 50px 20px;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+}
+
+.dealership-locator h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.dealership-locator p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #cccccc;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filters select, .filters button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #181818;
+  color: white;
+}
+
+.filters button {
+  background-color: #00aaff;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #0088cc;
+}
+
+/* Map Container */
+#map-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #181818;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Customer Support Section */
+.customer-support {
+  padding: 50px 20px;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+}
+
+.customer-support h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.customer-support p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #cccccc;
+}
+
+/* Chat Interface */
+.chat-interface {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 50px auto;
+  border-radius: 10px;
+  background-color: #181818;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 15px;
+  background-color: #242424;
+  font-size: 18px;
+  text-align: left;
+}
+
+.chat-window {
+  padding: 15px;
+  height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-message {
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.chat-message.user {
+  background-color: #00aaff;
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-message.support {
+  background-color: #242424;
+  color: white;
+  align-self: flex-start;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background-color: #242424;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #181818;
+  color: white;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #0088cc;
+}
+
+/* FAQ Section */
+.faq-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  background-color: #181818;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  background-color: #242424;
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background-color: #242424;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: #cccccc;
+}
+/* About Us Section */
+.about-us {
+  padding: 50px 20px;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+}
+
+.about-us h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.about-us p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #cccccc;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 50px 0;
+  padding-left: 20px;
+  border-left: 2px solid #00aaff;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+}
+
+.timeline-date {
+  position: relative;
+  left: -30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00aaff;
+}
+
+.timeline-content {
+  background-color: #181818;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  color: #cccccc;
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Team Section */
+.team-section {
+  margin: 50px 0;
+}
+
+.team-section h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.team-members {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.team-member {
+  text-align: center;
+  color: #cccccc;
+}
+
+.team-member h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* Sustainability Goals */
+.sustainability-section {
+  margin: 50px 0;
+}
+
+.sustainability-section h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.sustainability-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sustainability-section ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #cccccc;
+  position: relative;
+  padding-left: 25px;
+}
+
+.sustainability-section ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00aaff;
+}
+/* Footer Styles */
+.footer {
+  background-color: #101010; /* Dark background */
+  color: #ccc; /* Muted text color */
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.social-media {
+  margin-bottom: 20px;
+}
+
+.social-media a {
+  margin-left: 5px;
+  text-decoration: none;
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-media a:nth-child(1) {
+  background-color: #4267B2; /* Facebook */
+}
+
+.social-media a:nth-child(2) {
+  background-color: #1DA1F2; /* Twitter */
+}
+
+.social-media a:nth-child(3) {
+  background-color: #E1306C; /* Instagram */
+}
+
+.social-media a:nth-child(4) {
+  background-color: #2867B2; /* LinkedIn */
+}
+
+.social-media a:nth-child(5) {
+  background-color: #FF0000; /* YouTube */
+}
+
+.newsletter {
+  margin-bottom: 20px;
+}
+
+.newsletter h4 {
+  color: #fff;
+}
+
+.newsletter form{
+  display: inline;
+}
+
+.newsletter form input {
+  padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+}
+
+.newsletter form button {
+  padding: 10px 20px;
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.newsletter form button:hover {
+  background-color: #00aaff;
+}
+
+.legal {
+  font-size: 14px;
+}
+
+.legal a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.legal a:hover {
+  color: #fff;
+}
+
+.copyr {
+  background-color: #121212;
+  color: #cccccc;
+  text-align: center;
+  padding: 3px 5px;
+  font-size: 14px;
+}
+
+.copyr a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.copyr a:hover {
+  text-decoration: underline;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 55px; /* Position the button at the top */
+  right: 20px; /* Align to the right */
+  padding: 10px 12px;
+  background-color: #25D366; /* WhatsApp Green */
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button:hover {
+  background-color: #20b558; /* Darker WhatsApp Green */
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 13px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: none;
+  cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #45a049;
+}

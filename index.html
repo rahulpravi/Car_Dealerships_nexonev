@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Company</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+</head>
+<body>
+  <header>
+    <div class="logo">TATA.ev</div>
+    <nav class="navbar">
+  <div class="brand"></div>
+  <button class="toggle-button" id="toggleButton">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#models">Models</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Nexon.ev</h1>
+      <p>Say hello to the game-changer.</p>
+      <div class="cta-buttons">
+        <button href="Text/H.html" class="cta-primary">Explore Models</button>
+        <button class="cta-secondary">Book a Test Drive</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features Section -->
+  <section id="features" class="key-features">
+    <h2>Key Features</h2>
+    <div class="features-carousel">
+      <div class="feature-card">
+        <i class="icon">🏎️</i>
+        <p>Electric</p>
+      </div>
+      <div class="feature-card">
+        <i class="icon">🔋</i>
+        <p>Advanced Technology</p>
+      </div>
+      <div class="feature-card">
+        <i class="icon">💺</i>
+        <p>Premium Comfort</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Video -->
+  <section class="showcase-video">
+    <h2>See It in Action</h2>
+    <video controls>
+      <source src="assets/car-showcase.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+  
+  <section id="models" class="models-section">
+  <div class="models-header">
+    <h2>Our Models</h2>
+    <div class="filter-options">
+      <button class="filter-btn" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="suv">Grey</button>
+      <button class="filter-btn" data-filter="sedan">White</button>
+      <button class="filter-btn" data-filter="electric">Red</button>
+    </div>
+  </div>
+
+  <div class="models-grid">
+    <div class="model-card" data-category="suv">
+      <img src="assets/Black.jpg" alt="SUV Model 1">
+      <div class="model-info">
+        <h3>Daytona Grey DT</h3>
+      </div>
+    </div>
+    <div class="model-card" data-category="sedan">
+      <img src="assets/White.jpg" alt="Sedan Model 1">
+      <div class="model-info">
+        <h3>Pristine White DT</h3>
+      </div>
+    </div>
+    <div class="model-card" data-category="electric">
+      <img src="assets/Red.jpg" alt="Electric Model 1">
+      <div class="model-info">
+        <h3>Flame Red DT</h3>
+      </div>
+    </div>
+    <!-- Add more car cards as needed -->
+  </div>
+</section>
+
+<section class="product-detail">
+  <!-- Tabs Section -->
+  <div class="tabs-container">
+    <ul class="tabs">
+      <li class="tab active" data-tab="overview">Overview</li>
+      <li class="tab" data-tab="specifications">Specifications</li>
+      <li class="tab" data-tab="gallery">Gallery</li>
+      <li class="tab" data-tab="configurator">Configurator</li>
+    </ul>
+
+    <div class="tab-content">
+      <!-- Overview Section -->
+      <div id="overview" class="tab-pane active">
+        <h2>Model Highlights</h2>
+        <p>The ultimate driving experience with cutting-edge technology, premium comfort, and unmatched performance.</p>
+      </div>
+
+      <!-- Specifications Section -->
+      <div id="specifications" class="tab-pane">
+        <h2>Specifications</h2>
+        <table>
+          <tr>
+            <th>Feature</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>Charging time</td>
+            <td>DC  40Min-(10-100%)-60kW</br>
+          AC  6H 36Min-(10-100%)-7.2kW</td>
+          </tr>
+          <tr>
+            <td>Range</td>
+            <td>390 - 489 km</td>
+          </tr>
+          <tr>
+            <td>Top Speed</td>
+            <td>150 mph</td>
+          </tr>
+          <tr>
+            <td>Boot Space</td>
+            <td>350 Litres</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Gallery Section -->
+      <div id="gallery" class="tab-pane">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <img src="assets/g1.jpg" alt="Gallery Image 1">
+          <img src="assets/g2.jpg" alt="Gallery Image 2">
+          <img src="assets/g3.jpg" alt="Gallery Image 3">
+          <img src="assets/g4.jpg" alt="Gallery Image 4">
+          <img src="assets/g5.jpg" alt="Gallery Image 5">
+          <img src="assets/g6.jpg" alt="Gallery Image 6">
+          <img src="assets/g7.jpg" alt="Gallery Image 7">
+          <img src="assets/g8.jpg" alt="Gallery Image 8">
+          <img src="assets/g9.jpg" alt="Gallery Image 9">
+          <img src="assets/g10.jpg" alt="Gallery Image 10">
+          <img src="assets/g11.jpg" alt="Gallery Image 11">
+          <img src="assets/g12.jpg" alt="Gallery Image 12">
+        </div>
+      </div>
+
+      <!-- Configurator Section -->
+      <div id="configurator" class="tab-pane">
+        <h2>Configurator</h2>
+        <form>
+          <label for="color">Select Color:</label>
+          <select id="color">
+            <option value="red">Red</option>
+            <option value="black">Grey</option>
+            <option value="white">White</option>
+          </select>
+
+          <label for="wheels">Select Wheels:</label>
+          <select id="wheels">
+            <option value="18-inch">18-inch</option>
+            <option value="20-inch">20-inch</option>
+          </select>
+
+          <button type="submit">Customize</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="cta-section">
+    <button class="cta-btn">Buy Now</button>
+    <button class="cta-btn">Find a Dealer</button>
+    <button class="cta-btn">Contact Us</button>
+  </div>
+</section>
+
+<section id="technology" class="technology-section">
+  <h2>Technology & Innovation</h2>
+  <p>Discover cutting-edge advancements that redefine the future of mobility.</p>
+
+  <div class="tech-cards">
+    <div class="tech-card">
+      <div class="icon">⚡</div>
+      <h3>Electric Engines</h3>
+      <p>Experience powerful and eco-friendly performance with our advanced electric drivetrains.</p>
+    </div>
+
+    <div class="tech-card">
+      <div class="icon">🤖</div>
+      <h3>AI Driving Assistance</h3>
+      <p>Our AI-powered systems ensure safety, comfort, and precision driving in any condition.</p>
+    </div>
+
+    <div class="tech-card">
+      <div class="icon">🌐</div>
+      <h3>Connected Technology</h3>
+      <p>Stay connected with seamless integration of smart devices and real-time updates.</p>
+    </div>
+  </div>
+</section>
+
+<section id="dealership-locator" class="dealership-locator">
+  <h2>Find a Tata EV Dealership</h2>
+  <p>Locate the nearest dealership to explore Tata Electric Vehicles.</p>
+
+  <!-- Filter Options -->
+  <div class="filters">
+    <select id="filter-location">
+      <option value="">Select Location</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Bangalore">Bangalore</option>
+      <option value="Chennai">Chennai</option>
+    </select>
+
+    <select id="filter-services">
+      <option value="">Select Service</option>
+      <option value="Sales">Sales</option>
+      <option value="Service">Service</option>
+      <option value="Test Drive">Test Drive</option>
+    </select>
+
+    <button id="apply-filters">Apply Filters</button>
+  </div>
+
+  <!-- Map -->
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+</section>
+
+<section id="customer-support" class="customer-support">
+  <h2>Customer Support</h2>
+  <p>We're here to assist you with any questions or concerns.</p>
+
+  <!-- Chat Interface -->
+  <div class="chat-interface">
+    <div class="chat-header">Chat with Support</div>
+    <div class="chat-window">
+      <div class="chat-message user">Hi, I need help with my car.</div>
+      <div class="chat-message support">Sure! How can I assist you today?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chat-input-field" placeholder="Type your message here...">
+      <button id="chat-send-btn">Send</button>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq-section">
+    <h3>Frequently Asked Questions</h3>
+    <div class="faq-item">
+      <button class="faq-question">What is the warranty period for my car?</button>
+      <div class="faq-answer">
+        <p>The warranty period is 5 years or 60,000 miles, whichever comes first.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How can I book a service appointment?</button>
+      <div class="faq-answer">
+        <p>You can book a service appointment via our website or mobile app under the 'Service' section.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you offer roadside assistance?</button>
+      <div class="faq-answer">
+        <p>Yes, we provide 24/7 roadside assistance as part of our support services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about-us" class="about-us">
+  <h2>About Us</h2>
+  <p>Discover our journey, meet the team, and learn about our commitment to sustainability.</p>
+
+  <!-- Brand Story Timeline -->
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">1945</div>
+      <div class="timeline-content">
+        <h3>Our Beginning</h3>
+        <p>Tata Motors was founded in 1945, as a locomotive manufacturer.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">2019</div>
+      <div class="timeline-content">
+        <h3>First Electric Model</h3>
+        <p>Tata Motors, India's sole manufacturer of electric vehicles (EVs).</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">2030</div>
+      <div class="timeline-content">
+        <h3>Sustainability Goals</h3>
+        <p>Tata aims to achieve a 30% share of its passenger vehicle sales from EVs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <div class="team-section">
+    <h3>Meet Our Team</h3>
+    <div class="team-members">
+      <div class="team-member">
+        <img src="assets/pro.jpg" alt="Team Member 1">
+        <h4>Ratan Tata</h4>
+        <p>CEO</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/pro.jpg" alt="Team Member 2">
+        <h4>Shailesh Chandra</h4>
+        <p>MD</p>
+      </div>
+      <div class="team-member">
+        <img src="assets/pro.jpg" alt="Team Member 3">
+        <h4>Dhruval Doshi</h4>
+        <p>HDM</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sustainability Goals -->
+  <div class="sustainability-section">
+    <h3>Sustainability Goals</h3>
+    <p>We are dedicated to building a greener future through innovation and responsible practices:</p>
+    <ul>
+      <li>Achieving carbon neutrality by 2030.</li>
+      <li>Using 100% recyclable materials by 2035.</li>
+      <li>Expanding electric vehicle production to 80% of our lineup by 2030.</li>
+    </ul>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Social Media Links -->
+    <div class="social-media">
+       <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+    </div>
+    
+    <!-- Newsletter Sign-Up -->
+    <div class="newsletter">
+      <h4>Stay updated with our latest news</h4>
+      <form action="#" method="post">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+
+    <!-- Legal Links -->
+    <div class="legal">
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms of Service</a> | 
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+  <div class="copyr">
+  <!--<p>&copy; <span id="year"></span> Tata ev . All rights reserved.</p>-->
+  <p>Website design by <a href="https://yourportfolio.com" target="_blank">Rahul PR</a>.</p>
+  </div>
+</footer>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/+911234567890?text=Hi, I would like to know more about your services."
+     class="whatsapp-button" 
+     target="_blank"><i class="fab fa-whatsapp"></i></a>
+<button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><i class='fas fa-angle-double-up'></i></button>
+  <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
